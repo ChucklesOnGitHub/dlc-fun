@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorkflowBuilder Version="2.7.0"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:cv="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision"
+                 xmlns:dlc="clr-namespace:Bonsai.DeepLabCut;assembly=Bonsai.DeepLabCut"
+                 xmlns:dsp="clr-namespace:Bonsai.Dsp;assembly=Bonsai.Dsp"
+                 xmlns:al="clr-namespace:Bonsai.Audio;assembly=Bonsai.Audio"
+                 xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
+                 xmlns="https://bonsai-rx.org/2018/workflow">
+  <Workflow>
+    <Nodes>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="cv:CameraCapture">
+          <cv:Index>1</cv:Index>
+          <cv:CaptureProperties />
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="dlc:PredictPose">
+          <dlc:ModelFileName>snapshot-103000.pb</dlc:ModelFileName>
+          <dlc:PoseConfigFileName>pose_cfg.yaml</dlc:PoseConfigFileName>
+          <dlc:MinConfidence xsi:nil="true" />
+          <dlc:ScaleFactor xsi:nil="true" />
+          <dlc:ColorConversion>Bgr2Rgb</dlc:ColorConversion>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="dlc:GetBodyPart">
+          <dlc:Name>wrist2</dlc:Name>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Position.X</Selector>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="dsp:Rescale">
+          <dsp:Min>300</dsp:Min>
+          <dsp:Max>638</dsp:Max>
+          <dsp:RangeMin>50000</dsp:RangeMin>
+          <dsp:RangeMax>0</dsp:RangeMax>
+          <dsp:RescaleType>Linear</dsp:RescaleType>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="PropertyMapping">
+        <PropertyMappings>
+          <Property Name="Amplitude" Selector="it" />
+        </PropertyMappings>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="dlc:GetBodyPart">
+          <dlc:Name>wrist1</dlc:Name>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Position.Y</Selector>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="dsp:Rescale">
+          <dsp:Min>0</dsp:Min>
+          <dsp:Max>300</dsp:Max>
+          <dsp:RangeMin>200</dsp:RangeMin>
+          <dsp:RangeMax>800</dsp:RangeMax>
+          <dsp:RescaleType>Linear</dsp:RescaleType>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="PropertyMapping">
+        <PropertyMappings>
+          <Property Name="Frequency" Selector="it" />
+        </PropertyMappings>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="dsp:FunctionGenerator">
+          <dsp:BufferLength>441</dsp:BufferLength>
+          <dsp:Frequency>513.71493530273438</dsp:Frequency>
+          <dsp:Waveform>Sine</dsp:Waveform>
+          <dsp:SampleRate>44100</dsp:SampleRate>
+          <dsp:Amplitude>34652.037310177046</dsp:Amplitude>
+          <dsp:Offset>0</dsp:Offset>
+          <dsp:Phase>0</dsp:Phase>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="al:AudioPlayback">
+          <al:SampleRate>44100</al:SampleRate>
+          <al:State>Playing</al:State>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="GroupWorkflow">
+        <Name>MouseTest</Name>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="Combinator">
+                <Combinator xsi:type="wie:MouseMove" />
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="MemberSelector">
+                <Selector>X</Selector>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="Combinator">
+                <Combinator xsi:type="dsp:Rescale">
+                  <dsp:Min>0</dsp:Min>
+                  <dsp:Max>1</dsp:Max>
+                  <dsp:RangeMin>0</dsp:RangeMin>
+                  <dsp:RangeMax>1</dsp:RangeMax>
+                  <dsp:RescaleType>Linear</dsp:RescaleType>
+                </Combinator>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="PropertyMapping">
+                <PropertyMappings>
+                  <Property Name="Frequency" Selector="it" />
+                </PropertyMappings>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="MemberSelector">
+                <Selector>Y</Selector>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="Combinator">
+                <Combinator xsi:type="dsp:Rescale">
+                  <dsp:Min>0</dsp:Min>
+                  <dsp:Max>1200</dsp:Max>
+                  <dsp:RangeMin>0</dsp:RangeMin>
+                  <dsp:RangeMax>30000</dsp:RangeMax>
+                  <dsp:RescaleType>Linear</dsp:RescaleType>
+                </Combinator>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="PropertyMapping">
+                <PropertyMappings>
+                  <Property Name="Amplitude" Selector="it" />
+                </PropertyMappings>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="Combinator">
+                <Combinator xsi:type="dsp:FunctionGenerator">
+                  <dsp:BufferLength>441</dsp:BufferLength>
+                  <dsp:Frequency>325</dsp:Frequency>
+                  <dsp:Waveform>Sine</dsp:Waveform>
+                  <dsp:SampleRate>44100</dsp:SampleRate>
+                  <dsp:Amplitude>2125</dsp:Amplitude>
+                  <dsp:Offset>0</dsp:Offset>
+                  <dsp:Phase>0</dsp:Phase>
+                </Combinator>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="Combinator">
+                <Combinator xsi:type="al:AudioPlayback">
+                  <al:SampleRate>44100</al:SampleRate>
+                  <al:State>Playing</al:State>
+                </Combinator>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="WorkflowOutput" />
+            </Expression>
+          </Nodes>
+          <Edges>
+            <Edge From="0" To="1" Label="Source1" />
+            <Edge From="0" To="4" Label="Source1" />
+            <Edge From="1" To="2" Label="Source1" />
+            <Edge From="2" To="3" Label="Source1" />
+            <Edge From="3" To="7" Label="Source1" />
+            <Edge From="4" To="5" Label="Source1" />
+            <Edge From="5" To="6" Label="Source1" />
+            <Edge From="6" To="7" Label="Source2" />
+            <Edge From="7" To="8" Label="Source1" />
+            <Edge From="8" To="9" Label="Source1" />
+          </Edges>
+        </Workflow>
+      </Expression>
+    </Nodes>
+    <Edges>
+      <Edge From="0" To="1" Label="Source1" />
+      <Edge From="1" To="2" Label="Source1" />
+      <Edge From="1" To="6" Label="Source1" />
+      <Edge From="2" To="3" Label="Source1" />
+      <Edge From="3" To="4" Label="Source1" />
+      <Edge From="4" To="5" Label="Source1" />
+      <Edge From="5" To="10" Label="Source2" />
+      <Edge From="6" To="7" Label="Source1" />
+      <Edge From="7" To="8" Label="Source1" />
+      <Edge From="8" To="9" Label="Source1" />
+      <Edge From="9" To="10" Label="Source1" />
+      <Edge From="10" To="11" Label="Source1" />
+    </Edges>
+  </Workflow>
+</WorkflowBuilder>
