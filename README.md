@@ -1,6 +1,6 @@
 # dlc-fun
 Playing around with DeepLabCut and Bonsai for the Buenos Aires Hub of the course:
-CAJAL Modern Aproaches to Behavioral Analysis 21-25 Dec 2022 from course directors Alexander Mathis and Dambee Kim
+CAJAL Modern Aproaches to Behavioral Analysis 21-25 Nov 2022 from course directors Alexander Mathis and Dambee Kim
 BA Hub was led by Sabri Benas, Ceci Herbert and Facu Ermina.
 
 Follow the instructions for using DLC-live in Bonsai from:
