@@ -1,4 +1,4 @@
-## Closed-loop mouse based on body part
+# Closed-loop mouse based on body part
 
 In this example, when the mouse's nose was close to an object, then a servomotor, LED and sound would be triggered.
 This was implemented as a threshold on the euclidean distance of the nose to the center of the object.
