@@ -15,12 +15,12 @@ You can find two examples in this repository:
 - a theremin controlled with one wrist moving up and down for pitch and another left to right for volume.
 - a closed-loop task in which the nose of a mouse triggers a servomotor, LED and sound when close to an object.
 
-0) The workflow (Bonsai program) is run with Start or F5. Data streams are processed from left to right. Nodes can be enabled or disabled for debugging.
+0) A workflow (Bonsai program made from a series of interconnected nodes) is run with Start or F5. Data streams are processed from left to right. Nodes can be enabled or disabled for debugging.
 1) Workflows can be edited when they are not running: in general, nodes have properties (click the node and find the window on the right to edit them).
 In the CameraCapture node you will have to specify the camera's device ID.
 In the PredictPose node you have to load the model and pose_config.
 In the GetBodyPart node you can choose which body part you would like to extract, using the same name used for the labels in the model. You can use several GetBodyPart nodes to extract multiple bodyparts
-2) Many nodos have visualizers which you can access by double-clicking a node while the workflow is running
+2) Many nodes have visualizers which you can access by double-clicking a node while the workflow is running
 In the case of CamaraCapture, you can see the camera feed.
 In PredictPose you also see an overlay of the predicted bodyparts.
 3) While the workflow is running, within a visualizer, with right click you access more options in a bar at the bottom of the window.
