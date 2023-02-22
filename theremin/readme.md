@@ -5,6 +5,10 @@ Adapted from the example here: https://alexemg.github.io/DLC-Cajal-Course/conten
 Using a webcam, move one wrist up and down to control sound frequency (pitch) and the other left and right to control sound amplitude (volume).
 On a CPU this has a few seconds lag but it makes making melodies with your body even more fun :D
 
+The activity is easier to understand if the PredictPose visualizer is open (double-click that node while the workflow is running) and showing the body part labels (right-click the window and select Draw Labels). Then, also double click on both Rescale nodes to see the graphs and have a reference for the coordinates of the body parts that are creating the sound.
+
+Start by calibrating the Rescale max and min to be within the camera boundaries and around the coordinates in which the body parts usually are. To do this, hover over the visualizer to check the cursor coordinates and roughly map the ranges you want to capture. You can also modify the ranges of the waveform amplitude and frequency to control the range of sound volume and pitch. And you can also of course change the body parts that make the sounds!
+
 Specs used to run this DLC-live model in Bonsai (CPU only!)
 Bonsai version: 2.7.1
 DLC-live version (Bonsai.DeepLabCut): 0.3.0
