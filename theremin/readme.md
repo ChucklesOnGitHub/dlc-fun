@@ -1,4 +1,4 @@
-## Theremin
+# Theremin
 
 Project by Ceci Herbert adapted from the example here: https://alexemg.github.io/DLC-Cajal-Course/content/Day3_DLClive.html
 
@@ -9,12 +9,20 @@ The activity is easier to understand if the PredictPose visualizer is open (doub
 
 Start by calibrating the Rescale max and min to be within the camera boundaries and around the coordinates in which the body parts usually are. To do this, hover over the visualizer to check the cursor coordinates and roughly map the ranges you want to capture. You can also modify the ranges of the waveform amplitude and frequency to control the range of sound volume and pitch. And you can also of course change the body parts that make the sounds!
 
-Human model provided by Sabrina Benas who downloaded it from the model zoo some time in 2022:
-https://drive.google.com/file/d/1U9moI0B4jCpBEPRvnPhRBPb11GAbPqyg/view?usp=share_link
-Probably originally from Insafutdinov, Eldar, et al. 2018	arXiv:1605.03170 
+## Versions
+This was first used as a demonstration in the Buenos Aires hub of the Cajal Advance Neuroscience Course on Modern Aproaches to Behavioral Analysis (21-25th Nov 2022)
 
-DeepLabCut: Mathis et al. 2018
-Model Zoo: http://modelzoo.deeplabcut.org
+Then the piano mapping and start control were added by Ceci for an activity in the Cultural Science Center C3 in Buenos Aires (25th Feb 2023) by Sabri, Salva and Ulises.
+
+For upcoming presentations the toggle control logic was added to allow for standalone use of the activity. This was done with the help of Bruno Cruz from NeuroGears (Bonsai developers). https://github.com/bonsai-rx/bonsai/discussions/1278. And also used MoveNet as an alternative to DeepLabCut.
+
+We have many ideas on how to expand the project. 
+
+Share how you used it and I can add it here!
+
+## Coming soon: project future, more documentation and videos.
+
+## Specs
 
 Specs used to run this DLC-live model in Bonsai with CPU only
 Bonsai version: 2.7.1
@@ -30,15 +38,11 @@ TensorFlow for GPU: 2.10.0
 Bonsai version: 2.7.2
 DLC-live version (Bonsai.DeepLabCut): 0.3.0
 
-# Versions
-This was first used as a demonstration in the Buenos Aires hub of the Cajal Advance Neuroscience Course on Modern Aproaches to Behavioral Analysis (21-25th Nov 2022)
+Human model provided by Sabrina Benas who downloaded it from the model zoo some time in 2022:
+https://drive.google.com/file/d/1U9moI0B4jCpBEPRvnPhRBPb11GAbPqyg/view?usp=share_link
+Probably originally from Insafutdinov, Eldar, et al. 2018	arXiv:1605.03170 
 
-Then the piano mapping and start control were added by Ceci for an activity in the Cultural Science Center C3 in Buenos Aires (25th Feb 2023) by Sabri, Salva and Ulises.
+DeepLabCut: Mathis et al. 2018
+Model Zoo: http://modelzoo.deeplabcut.org
 
-For upcoming presentations the toggle control logic was added to allow for standalone use of the activity. This was done with the help of Bruno Cruz from NeuroGears (Bonsai developers). https://github.com/bonsai-rx/bonsai/discussions/1278. And also used MobileNet as an alternative to DeepLabCut.
-
-We have many ideas on how to expand the project. 
-
-Share how you used it and I can add it here!
-
-# Coming soon: project future, more documentation and videos.
+MoveNet implementation in Bonsai by Bruno Cruz https://github.com/bruno-f-cruz/movenet
