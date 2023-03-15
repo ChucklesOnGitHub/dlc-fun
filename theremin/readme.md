@@ -14,7 +14,9 @@ Start by calibrating the Rescale max and min to be within the camera boundaries 
 First used as a demo of DLC-live in Bonsai for the Buenos Aires hub of the Cajal Advance Neuroscience Course on Modern Aproaches to Behavioral Analysis (21-25th Nov 2022) Video: theremin_argentino.mp4
 
 - Theremin_piano_threshold.bonsai
-The piano mapping and start control were added for an activity in the Cultural Science Center C3 in Buenos Aires (25th Feb 2023) with Sabri, Salva and Ulises.
+The piano mapping and start control were added for an activity in the Cultural Science Center C3 in Buenos Aires (25th Feb 2023)
+"Música Intangible. Por Sabrina Soledad Benas, Ulises Alejandro López y Juan Salvador Calanni.
+Un espacio para interactuar con un theremin, un instrumento que se toca sin tocar ningún objeto. En esta estación se recreará un theremin con Inteligencia Artificial, programación y matemática."
 
 - Theremin_movenet_withcontrollogic_multicast.bonsai
 For upcoming presentations the toggle control logic was added to allow for standalone use of the activity. This was done with the help of Bruno Cruz from NeuroGears (Bonsai developers). https://github.com/bonsai-rx/bonsai/discussions/1278. And also used MoveNet as an alternative to DeepLabCut.
