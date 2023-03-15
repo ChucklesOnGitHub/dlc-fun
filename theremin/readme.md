@@ -10,10 +10,13 @@ The activity is easier to understand if the PredictPose visualizer is open (doub
 Start by calibrating the Rescale max and min to be within the camera boundaries and around the coordinates in which the body parts usually are. To do this, hover over the visualizer to check the cursor coordinates and roughly map the ranges you want to capture. You can also modify the ranges of the waveform amplitude and frequency to control the range of sound volume and pitch. And you can also of course change the body parts that make the sounds!
 
 ## Versions
-This was first used as a demo of DLC-live in Bonsai for the Buenos Aires hub of the Cajal Advance Neuroscience Course on Modern Aproaches to Behavioral Analysis (21-25th Nov 2022)
+- Theremin.bonsai
+First used as a demo of DLC-live in Bonsai for the Buenos Aires hub of the Cajal Advance Neuroscience Course on Modern Aproaches to Behavioral Analysis (21-25th Nov 2022) Video: theremin_argentino.mp4
 
-Then the piano mapping and start control were added for an activity in the Cultural Science Center C3 in Buenos Aires (25th Feb 2023) with Sabri, Salva and Ulises.
+- Theremin_piano_threshold.bonsai
+The piano mapping and start control were added for an activity in the Cultural Science Center C3 in Buenos Aires (25th Feb 2023) with Sabri, Salva and Ulises.
 
+- Theremin_movenet_withcontrollogic_multicast.bonsai
 For upcoming presentations the toggle control logic was added to allow for standalone use of the activity. This was done with the help of Bruno Cruz from NeuroGears (Bonsai developers). https://github.com/bonsai-rx/bonsai/discussions/1278. And also used MoveNet as an alternative to DeepLabCut.
 
 We have many ideas on how to expand the project. 
