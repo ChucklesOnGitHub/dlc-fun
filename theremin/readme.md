@@ -11,7 +11,7 @@ Start by calibrating the Rescale max and min to be within the camera boundaries 
 
 ## Versions
 - Theremin.bonsai
-First used as a demo of DLC-live in Bonsai for the Buenos Aires hub of the Cajal Advance Neuroscience Course on Modern Approaches to Behavioral Analysis (21-25th Nov 2022) Video: theremin_argentino.mp4
+First used as a demo of DLC-live in Bonsai for the Buenos Aires hub of the Cajal Advanced Neuroscience Course on Modern Approaches to Behavioral Analysis (21-25th Nov 2022) Video: theremin_argentino.mp4
 
 - Theremin_piano_threshold.bonsai
 The piano mapping and start control were added for an activity in the Cultural Science Center C3 in Buenos Aires (25th Feb 2023)
