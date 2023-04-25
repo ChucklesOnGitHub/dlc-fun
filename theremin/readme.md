@@ -21,6 +21,9 @@ Un espacio para interactuar con un theremin, un instrumento que se toca sin toca
 - Theremin_movenet_withcontrollogic_multicast.bonsai
 For upcoming presentations the toggle control logic was added to allow for standalone use of the activity. This was done with the help of Bruno Cruz from NeuroGears (Bonsai developers). https://github.com/bonsai-rx/bonsai/discussions/1278. And also used MoveNet as an alternative to DeepLabCut.
 
+- Theremin_movenet_basic.bonsai
+Was used as a demo of real time pose estimation in Bonsai for the NeuroDoWo 2023 workshop "Open Source Tools for Behavioral Neuroscience by Open Ephys" (4th May 2023) with Yannick Günzel and Katja Slangewal.
+
 We have many ideas on how to expand the project. 
 
 Share how you used it and I can add it here!
