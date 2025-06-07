@@ -21,7 +21,7 @@ Computer: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz   2.42 GHz, 16 GB RAM, 
 
 The mouse model in this repo was trained by me on this same computer with DLC 2.2 but just for testing purposes, for few frames and iterations. Works great on CPU to quickly demo DLC-live in Bonsai for students.
 
-An alternative would is to get the top-view mouse SuperAnimal made by [Ye et al 2023]((https://arxiv.org/abs/2203.07436v2) in the [DLC_ma_supertopview5k_resnet_50_iteration-0_shuffle-1.tar.gz
-]([url](https://huggingface.co/mwmathis/DeepLabCutModelZoo-SuperAnimal-TopViewMouse/tree/main)) and running it with a GPU. This generalizes well and worked really nicely even with a 3D printed mouse. Having a live camera stream gets the point across better than using a file, which feels too similar to offline inference.
+An alternative would is to get the top-view mouse SuperAnimal made by [Ye et al 2023](https://arxiv.org/abs/2203.07436v2) from the [DLC_ma_supertopview5k_resnet_50_iteration-0_shuffle-1.tar.gz
+](https://huggingface.co/mwmathis/DeepLabCutModelZoo-SuperAnimal-TopViewMouse/tree/main) and running it with a GPU. This generalizes well on videos that many students have and worked really nicely even with a 3D printed mouse in a live camera feed. Having a live camera stream gets the point across better than using a file, which feels too similar to offline inference.
 
 You would also train your own model for specific applications.
