@@ -4,9 +4,11 @@ CAJAL Modern Aproaches to Behavioral Analysis 21-25 Nov 2022 from course directo
 BA Hub was led by Sabri Benas, Ceci Herbert and Facu Ermina.
 
 Follow the instructions for using DLC-live in Bonsai from:
-https://github.com/bonsai-rx/deeplabcut
+https://github.com/bonsai-rx/deeplabcut and
 https://alexemg.github.io/DLC-Cajal-Course/content/Day3_DLClive.html
-You will need to have installed Bonsai and the DLC packages and TensorFlow, have an exported model and the Bonsai workflow.
+
+To run the Bonsai workflows, you will need to have installed Bonsai and the Bonsai.DeepLabCut package and TensorFlow, and have an exported model: both a snapshot (iteration) of the trained model (snapshot-iteration.pb) and the config file of the trained model (pose_cfg.yaml) from which you get the keypoint labels.
+
 We added an overview in our hub slides 75-79 (Spanish): https://docs.google.com/presentation/d/1ke5zAIKqfNCteYBtaZEkyZeBlnWUPsr7f8k0jM4eMH0/edit?usp=sharing
 
 Here is a primer about what you can do in Bonsai with this and how (learn more about using Bonsai at https://bonsai-rx.org/docs/articles/editor.html)
